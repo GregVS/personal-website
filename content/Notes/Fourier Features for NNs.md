@@ -1,4 +1,4 @@
-This is a very informal interpretation of https://arxiv.org/abs/2006.10739
+Paper Citation: [Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains](https://arxiv.org/abs/2006.10739)
 # Problem
 Fully connected MLPs struggle to capture high frequency details in low dimensional problems. In this example the network is given (x, y) coordinates and learns the RGB values of the image. However, since NNs learn smooth functions, a network struggles to represent both high level and the finer details. 
 
