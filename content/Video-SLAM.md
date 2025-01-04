@@ -8,6 +8,7 @@ Some of the general goals. I've crossed out the parts I've completed:
 - [x] Matching and pose estimation using essential matrix transforms
 - [x] 3D point cloud construction (triangulation and matching)
 - [x] Local/global bundle adjustment (optimizing poses and 3D feature locations)
+- [ ] Map point culling
 - [ ] Loop closure (recognizing re-visited places)
 
 Some possible extensions I'm thinking about:
