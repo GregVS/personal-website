@@ -20,7 +20,7 @@ There are some cool applications I'm thinking about. I don't intend to implement
 
 # Progress
 **(Jan 3, 2025)**\
-So I've made some progress. So far we have some slam happening and it works surprisingly well. I had too many issues trying to use g2o for graph optimization so I gave up and switched to Ceres. Ceres seems much better structured and the auto-diff support is nice. Next steps are to make this go brrr. It's not yet real-time. Single pose optimization is fast, but joint optimization with poses and points is pretty slow. Here's a pic showing the trajectory down a highway with trees on either side:
+SLAM is happening and it mostly works. I had too many issues trying to use g2o for graph optimization so I gave up and switched to Ceres. Ceres seems much better structured and the auto-diff support is nice. Here's a pic showing the trajectory down a highway with trees on either side:
 
 ![[slam-progress-1.png|500]]
 
