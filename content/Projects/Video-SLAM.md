@@ -25,7 +25,7 @@ SLAM is happening and it mostly works. I had too many issues trying to use g2o f
 ![[slam-progress-1.png|500]]
 
 **(Jan 4, 2025)**\
-SLAM V1 done. It works decently well, provided you get lucky with initialization. It has most of the necessary components of any SLAM algorithm. Now it's time to make some real good SLAM. I'll be revisiting each of the core components and improving them to make the algorithm more robust and learn more deeply about each part. The goal for V2 is to be able to process a video of a car racing around a track (I'm probably going to screen record iRacing footage) and build a complete map of the track. V1 is not robust enough for this and it gets slower the longer it runs. *Objective #1: robust, accurate map initialization.*
+SLAM V1 done. It works decently well, provided you get lucky with initialization. It has most of the necessary components of any SLAM algorithm. Now it's time to make some real good SLAM. I'll be revisiting each of the core components and improving them to make the algorithm more robust and learn more deeply about each part. The goal for V2 is to be able to process a video of a car racing around a track (I'm probably going to screen record iRacing footage) and build a complete map of the track. V1 is not robust enough for this and it gets slower the longer it runs.
 
 **(Jan 5, 2025)**\
 The first step of V2 is to speed up the pose estimates. Currently, this is one of the bottlenecks, since computing the relative pose change between every camera frame is too expensive. I wrote more in detail [[SLAM V2 Better Pose Estimates|here]].
