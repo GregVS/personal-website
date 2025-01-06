@@ -19,7 +19,7 @@ There are some cool applications I'm thinking about. I don't intend to implement
 	- [ ] Occlusion: being able to have the 3D objects hide behind parts of the video
 
 # Progress
-SLAM V1 is complete. It's quite brittle but it works well for relatively simple trajectories. Here's a pic showing the trajectory down a highway with trees on either side: ![[slam-progress-1.png|500]]
+SLAM V1 is complete. It's quite brittle and not real-time but it works well for relatively simple trajectories. Here's a pic showing the trajectory down a highway with trees on either side: ![[slam-progress-1.png|500]]
 
 I'll be writing logs as I work on V2:
 - [[SLAM - Key Points & Descriptors]]

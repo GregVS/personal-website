@@ -1,0 +1,1 @@
+[Stacked](https://www.stacked.com/) is a video sharing platform. It's evolved a bit since I interned there, but in 2021 we were building a watch party app; think Clubhouse + YouTube/Crunchyroll videos. I worked on their Flutter mobile app.
