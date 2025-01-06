@@ -2,7 +2,14 @@
 
 I was on the track team all throughout high school. I wasn't particularly stellar, but I loved it and had a good group of friends on the team. We decided it would be fun to bet on teammates. So we started a fantasy league. We would draft athletes from our school to assemble our fantasy team and earn points based on how they performed at the meets. 
 
-It started as a Google sheets game. Every week we'd check the results posted online and calculate how many points each person earned. It was quite tedious and no one trusted each other's calculations. One of my friends mentioned that it would be great if there was an app for our game. So I made it.
+It started as a Google sheets game. Every week we'd check the results posted online and calculate how many points each person earned. It was quite tedious and no one trusted each other's calculations. So I made us an app.
+
+## Features
+- Support for any high school using [Athletic.net](https://www.athletic.net/) (They gave me permission to scrape results from their site)
+- Snake draft for initial fantasy team creation
+- Automated meet results fetching and scoring
+- Predicted future scores for athletes
+- Support for trading athletes among fantasy teams
 ## Screenshots
 ![[fantasy-track-1.png|400]] ![[fantasy-track-2.png|400]] ![[fantasy-track-3.png|400]] ![[fantasy-track-4.png|400]]
 

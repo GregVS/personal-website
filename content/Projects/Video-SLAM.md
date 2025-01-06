@@ -1,6 +1,6 @@
 I recently read [Probabilistic Robotics by Sebastian Thrun](http://www.probabilistic-robotics.org/). I've known about Thrun for quite some time; I remember watching his videos and reading his papers back in middle school when I built an autonomous toy car. It's fair to say he's at least partially inspired my interest in robotics. If you haven't read it, the core focus is on localization and mapping. Put them together and you get SLAM (Simultaneous Localization and Mapping). Big idea: take some sensor data and figure out what your world looks like and where you are in that world.
 
-I'm going to build a monocular visual SLAM because it's cool and because I don't have two cameras. I've taken some inspiration from [ORB SLAM](https://github.com/UZ-SLAMLab/ORB_SLAM3), and have some fun ideas for extensions. [Source code here](https://github.com/GregVS/Video-SLAM).
+I'm going to build a monocular visual SLAM because it's cool and because I don't have two cameras. I've taken some inspiration from [ORB SLAM](https://github.com/UZ-SLAMLab/ORB_SLAM3), but it won't be quite the same, since this is an exercise in building from first principles. [Source code here](https://github.com/GregVS/Video-SLAM).
 
 # Making SLAM
 Some of the general goals/features:
@@ -26,3 +26,6 @@ SLAM is happening and it mostly works. I had too many issues trying to use g2o f
 
 **(Jan 4, 2025)**\
 SLAM V1 done. It works decently well, provided you get lucky with initialization. It has most of the necessary components of any SLAM algorithm. Now it's time to make some real good SLAM. I'll be revisiting each of the core components and improving them to make the algorithm more robust and learn more deeply about each part. The goal for V2 is to be able to process a video of a car racing around a track (I'm probably going to screen record iRacing footage) and build a complete map of the track. V1 is not robust enough for this and it gets slower the longer it runs. *Objective #1: robust, accurate map initialization.*
+
+**(Jan 5, 2025)**\
+The first step of V2 is to speed up the pose estimates. Currently, this is one of the bottlenecks, since computing the relative pose change between every camera frame is too expensive. I wrote more in detail [[SLAM V2 Better Pose Estimates|here]].
