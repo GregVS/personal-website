@@ -9,7 +9,7 @@ const ArticleTitle: QuartzComponent = ({ fileData, displayClass }: QuartzCompone
   let img = null;
   if (fileData.slug === "index") {
     return <>
-      <img src="images/greg.png" style="height: 140px; margin: 0;"></img>
+      <img src="images/greg.png" style="height: 140px; margin-top: 16px; margin-bottom: 0;"></img>
       <h1 class={classNames(displayClass, "article-title")} style="margin-top: 8px;">{title}</h1>
     </>
   }
