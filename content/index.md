@@ -1,5 +1,5 @@
 ---
-title: Hi, I'm Greg
+title: Hi, I'm Greg 👋
 ---
 I'm a software engineer that likes building cool things.
 ## Projects
