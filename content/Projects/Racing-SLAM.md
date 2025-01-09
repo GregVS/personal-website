@@ -26,3 +26,4 @@ Racing-SLAM V1 is complete. It's quite brittle and not real-time but it works we
 I'll be writing logs as I work on V2:
 - [[SLAM - Key Points & Descriptors]]
 - [[SLAM - Initial Pose Estimates]]
+- [[SLAM - Initialization]]
