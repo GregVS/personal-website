@@ -3,7 +3,7 @@ title: Hi, I'm Greg 👋
 ---
 I'm a software engineer that likes building cool things.
 ## Projects
-- [[Video-SLAM]]
+- [[Racing-SLAM]]
 - [[Fantasy Track and Field]]
 - [[Autonomous Toy Car]]
 ## Experience

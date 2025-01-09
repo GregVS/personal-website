@@ -1,0 +1,4 @@
+---
+title: "SLAM: Initialization"
+---
+In the [[SLAM - Key Points & Descriptors|previous log]] I covered the key point and descriptor algorithms. The next step is using this data to initialization the SLAM process. The initialization step involves computing the first 3D map points and computing the first two pose estimates. To do this, I'll be using the [[The Essential & Fundamental Matrix|essential matrix transform]]. Technically, it's only necessary to use two frames to do the initialization, although I might explore using additional frames if it helps. Regardless, it is important that the frames used for initialization provide a good pair for triangulating correspondences. We can evaluate the frames by checking that they are sufficient correspondences between the two images and that the correspondences experience sufficient parallax (difference in pixel location).
