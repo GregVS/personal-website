@@ -1,10 +1,9 @@
+# Inspiration
 I recently read [Probabilistic Robotics by Sebastian Thrun](http://www.probabilistic-robotics.org/). I've known about Thrun for quite some time; I remember watching his videos and reading his papers back in middle school when I built an autonomous toy car. It's fair to say he's at least partially inspired my interest in robotics. If you haven't read it, the core focus is on localization and mapping. Put them together and you get SLAM (Simultaneous Localization and Mapping). Big idea: take some sensor data and figure out what your world looks like and where you are in that world.
+# The Project
+I'm building monocular visual SLAM for racing. I've taken some inspiration from [ORB SLAM](https://github.com/UZ-SLAMLab/ORB_SLAM3), but it won't be quite the same, since this is an exercise in building from first principles. My source code will be available [on GitHub](https://github.com/GregVS/Racing-SLAM).
 
-I'm building monocular visual SLAM because it's cool and because I don't have two cameras. I've taken some inspiration from [ORB SLAM](https://github.com/UZ-SLAMLab/ORB_SLAM3), but it won't be quite the same, since this is an exercise in building from first principles. [Source code here](https://github.com/GregVS/Racing-SLAM).
-
-I'm calling it Racing-SLAM, because I'll be running it on racing footage (probably from iRacing or another sim). Might try it on real Porsche Cup or F1 video later.
-
-# Overview
+## Overview
 Some of the general goals/features:
 - Feature extraction (we're making sparse SLAM)
 - Matching and pose estimation using essential matrix transforms
@@ -20,10 +19,6 @@ There are some cool applications I'm thinking about. I don't intend to implement
 	- Overlay 3D objects in the virtual world onto the video feed
 	- Occlusion: being able to have the 3D objects hide behind parts of the video
 
-# Progress
-Racing-SLAM V1 is complete. It's quite brittle and not real-time but it works well for relatively simple trajectories. Here's a pic showing the trajectory down a highway with trees on either side: ![[slam-progress-1.png|500]]
-
-I'll be writing logs as I work on V2:
-- [[SLAM - Key Points & Descriptors]]
-- [[SLAM - Initial Pose Estimates]]
-- [[SLAM - Initialization]]
+## Logs
+Read about my progress:
+- [[Racing-SLAM V1]]

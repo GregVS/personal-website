@@ -1,6 +1,7 @@
 ---
-title: "SLAM: Initial Pose Estimates"
+draft: "true"
 ---
+
 During every frame in SLAM, we need to propose an initial estimate for the camera position. Here's how it's done in V1:
 	[[SLAM - Key Points & Descriptors|Key points]] are extracted for every frame and are matched against the previous frame. The correspondences are then refined using RANSAC and the [[The Essential & Fundamental Matrix|Essential Matrix]] transform. Effectively, this performs many many iterations to estimate an essential matrix that fits the largest number of points. This is necessary because many of the correspondences could be incorrect, and since the essential matrix is computed from (~8) data points, inconsistencies will affect the estimate. Unfortunately **this is slow**.
 
