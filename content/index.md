@@ -6,6 +6,7 @@ I'm a software engineer that likes building cool things.
 - [[Racing-SLAM]]
 - [[Fantasy Track and Field]]
 - [[Autonomous Toy Car]]
+
 And more on my [GitHub](https://github.com/GregVS) page.
 ## Experience
 - [[Renown]]
