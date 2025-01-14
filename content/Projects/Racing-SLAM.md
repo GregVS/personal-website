@@ -22,3 +22,4 @@ There are some cool applications I'm thinking about. I don't intend to implement
 ## Logs
 Read about my progress:
 - [[Racing-SLAM V1]]
+- [[Next steps for Racing-SLAM V1]]
