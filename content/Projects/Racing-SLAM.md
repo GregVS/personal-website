@@ -19,6 +19,11 @@ There are some cool applications I'm thinking about. I don't intend to implement
 	- Overlay 3D objects in the virtual world onto the video feed
 	- Occlusion: being able to have the 3D objects hide behind parts of the video
 
+## Demo
+Here's a demo of the project. This demo shows part of a lap around the beautiful Okayama circuit. The blue triangles represent the positional estimates of the car (which pretty accurately represent the racing line). The dots represent reference features in the images that the program uses to determine the car's location relative to its surrounding. The points are color coded based on their color in the image, so you'll notice that big groups of trees around the circuit are green, while the gray dots represent barriers and fences. Note: the demo is sped up.
+
+![[okayama-demo.mp4]]
+
 ## Logs
 Read about my progress:
 - [[Racing-SLAM V1]]
