@@ -1,5 +1,7 @@
 ---
 draft: true
+created: 2025-01-23
+modified: 2025-01-23
 ---
 
 Paper: [LSD-SLAM: Large-Scale Direct Monocular SLAM ](https://jakobengel.github.io/pdf/engel14eccv.pdf)

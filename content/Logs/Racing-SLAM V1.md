@@ -1,3 +1,7 @@
+---
+created: 2025-01-11
+modified: 2025-01-11
+---
 I recently implemented [V1](https://github.com/GregVS/Racing-SLAM/tree/v1) of Racing SLAM, a monocular visual SLAM algorithm intended for car racing footage. It took about a full one to two weeks of work, but I'm relieved to have something that works... kinda. There's still issues with V1; it doesn't seem to work well on footage with complex motion. But I still believe there's value in getting it to work on simple footage with forwards motion. It means that something is working. When solving a hard problem, that usually a good first step. Get something working. V2 will be a whole other story. There's a lot of rethinking that needs to happen. For now, here's a brief overview of how V1 works.
 
 ![[slam-progress-1.png|500]]

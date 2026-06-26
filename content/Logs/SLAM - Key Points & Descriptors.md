@@ -1,5 +1,7 @@
 ---
 draft: true
+created: 2025-01-05
+modified: 2025-01-11
 ---
 The visual SLAM algorithm starts with an image. The first step is to take an image frame and generate key points and descriptors (AKA "features"). By doing this, we'll be able to identify which 3D map points correspond to points in our image, and talk about which points in the previous frame correspond to which points in the current frame.
 

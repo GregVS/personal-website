@@ -1,5 +1,7 @@
 ---
 draft: true
+created: 2025-01-11
+modified: 2025-01-11
 ---
 [[SLAM - Initialization|Previously]], I implemented the initialization stage for Racing-SLAM. The output of this phase is demonstrated below. It consists of 2 pose estimates and a set of 3D triangulated map points.
 

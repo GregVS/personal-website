@@ -1,3 +1,7 @@
+---
+created: 2025-01-06
+modified: 2025-01-06
+---
 Renown was an app for friend groups to collectively curate content. My own friends used it to keep pictures from our favorite moments together along with a list of restaurants and cafes we wanted to try. Renown made it easy to take any content (photos, website) and turn it into an beautiful list.
 
 Some things I built working at Renown include:

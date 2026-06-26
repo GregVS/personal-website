@@ -1,5 +1,7 @@
 ---
 draft: true
+created: 2025-01-08
+modified: 2025-01-11
 ---
 
 In the [[SLAM - Key Points & Descriptors|previous log]] I covered the key point and descriptor algorithms. The next step is using this data to initialization the SLAM process. The initialization step involves computing the first 3D map points and computing the first two pose estimates, using something like [[The Essential & Fundamental Matrix|essential matrix transform]].

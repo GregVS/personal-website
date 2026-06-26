@@ -1,3 +1,7 @@
+---
+created: 2025-01-04
+modified: 2025-01-05
+---
 *This is an app I made in 2020. [GitHub link](https://github.com/GregVS/Fantasy-Track-Backend/tree/master)*
 
 I was on the track team all throughout high school. I wasn't particularly stellar, but I loved it and had a good group of friends on the team. We decided it would be fun to bet on teammates. So we started a fantasy league. We would draft athletes from our school to assemble our fantasy team and earn points based on how they performed at the meets. 

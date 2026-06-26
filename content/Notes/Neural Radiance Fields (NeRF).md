@@ -1,3 +1,7 @@
+---
+created: 2025-01-04
+modified: 2025-01-04
+---
 [Neural radiance fields](https://arxiv.org/abs/2003.08934) are neural networks designed to interpolate between views of a scene. A fully connected MLP is used to learn a 3D, color representation of a scene from 2D images.
 
 - The inputs to the network are 3D scene coordinates, a viewing angle and direction (two angles). 

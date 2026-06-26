@@ -1,3 +1,7 @@
+---
+created: 2025-01-13
+modified: 2025-01-23
+---
 After some improvements, I've gotten my SLAM algorithm to work decently on racing footage around Okayama circuit. Here's the reference video that I'm trying to map and localize:
 
 ![[okayama-lap.mp4]]

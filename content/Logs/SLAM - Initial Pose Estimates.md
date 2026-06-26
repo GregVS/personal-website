@@ -1,5 +1,7 @@
 ---
 draft: "true"
+created: 2025-01-05
+modified: 2025-01-11
 ---
 
 During every frame in SLAM, we need to propose an initial estimate for the camera position. Here's how it's done in V1:

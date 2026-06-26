@@ -1,3 +1,7 @@
+---
+created: 2025-01-06
+modified: 2025-01-06
+---
 This is a project from way back in 2018. It was one of my early experiences with robotics.
 
 <div style="width: 100%;">

@@ -1,3 +1,7 @@
+---
+created: 2025-01-05
+modified: 2025-01-05
+---
 The fundamental matrix describes the *fundamental* relationship between two corresponding points in two camera images of a scene.
 
 The [fundamental matrix](https://en.wikipedia.org/wiki/Fundamental_matrix_(computer_vision)) is derived by analyzing the projective geometry between two cameras and a 3D point. We can project a point $x$, expressed in camera #1's homogenous image coordinates, to a 3D line. This is $\bf F \cdot x$, where $\bf F$ is called the 3x3 fundamental matrix. $\bf Fx = [a \ b \ c]^T$ thus represents a line equation in 3d space of the form $ax + by +c = 0$. This means that if we want $x'$ to be on that line, we just need to satisfy that equation. So $(x')^T \cdot F \cdot x = 0$.
