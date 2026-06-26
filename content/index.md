@@ -3,7 +3,7 @@ title: Hi, I'm Greg 👋
 created: 2025-01-03
 modified: 2025-01-13
 ---
-I'm a software engineer that likes building cool things.
+I'm a software engineer that likes learning and building cool things.
 ## Projects
 - [[A Model Made of Shapley Values]]
 - [[Racing-SLAM]]
