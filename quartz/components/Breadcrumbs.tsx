@@ -1,6 +1,6 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import breadcrumbsStyle from "./styles/breadcrumbs.scss"
-import { FullSlug, SimpleSlug, joinSegments, resolveRelative } from "../util/path"
+import { FullSlug, SimpleSlug, joinSegments, pathToRoot, resolveRelative } from "../util/path"
 import { QuartzPluginData } from "../plugins/vfile"
 import { classNames } from "../util/lang"
 
@@ -65,7 +65,10 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
     }
 
     // Format entry for root element
-    const firstEntry = formatCrumb(options.rootName, fileData.slug!, "/" as SimpleSlug)
+    const firstEntry: CrumbData = {
+      displayName: options.rootName,
+      path: pathToRoot(fileData.slug!),
+    }
     const crumbs: CrumbData[] = [firstEntry]
 
     if (!folderIndex && options.resolveFrontmatterTitle) {

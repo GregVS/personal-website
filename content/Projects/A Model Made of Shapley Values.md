@@ -1,6 +1,6 @@
 ---
-created: 2026-06-18
-modified: 2026-06-18
+created: 2025-03-01
+modified: 2025-03-01
 ---
 *A tabular machine-learning model I derived from first principles, where the prediction and its explanation are literally the same object. There's no trained model in the usual sense; the dataset is the model.*
 
