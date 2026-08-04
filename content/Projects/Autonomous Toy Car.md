@@ -2,7 +2,7 @@
 created: 2025-01-06
 modified: 2025-01-06
 ---
-This was one of my early experiences with robotics. A few highlights:
+This was one of my early experiences with robotics (2017). A few highlights:
 
 - 2D LiDAR and SLAM implementation using Random Mutation Hill Climbing for laser scan matching
 - Trajectory planning based on Stanford's [Stanley](https://robots.stanford.edu/papers/thrun.stanley05.pdf) from 2005 DARPA Grand Challenge
