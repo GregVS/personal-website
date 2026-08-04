@@ -13,7 +13,9 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "posthog",
+      apiKey: "phc_qunYxWyNUs6AQX4M64srvfbpfhFpnVyqAqfwD3HrCcFW",
+      host: "https://us.i.posthog.com",
     },
     locale: "en-US",
     baseUrl: "gregvs.com",
