@@ -1,6 +1,6 @@
 import { QuartzTransformerPlugin } from "../types"
 import { Root, Html, BlockContent, DefinitionContent, Paragraph, Code } from "mdast"
-import { Element, Literal, Root as HtmlRoot } from "hast"
+import { Element, ElementContent, Literal, Root as HtmlRoot } from "hast"
 import { ReplaceFunction, findAndReplace as mdastFindReplace } from "mdast-util-find-and-replace"
 import rehypeRaw from "rehype-raw"
 import { SKIP, visit } from "unist-util-visit"
@@ -661,6 +661,64 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           }
         })
       }
+
+      // lift images with alt text out of their paragraph into a figure with a visible caption
+      plugins.push(() => {
+        const isCaptionedImage = (child: ElementContent): child is Element =>
+          child.type === "element" &&
+          child.tagName === "img" &&
+          typeof child.properties.alt === "string" &&
+          child.properties.alt !== ""
+
+        return (tree: HtmlRoot, _file) => {
+          visit(tree, "element", (node, index, parent) => {
+            if (node.tagName !== "p" || index === undefined || parent === undefined) {
+              return
+            }
+            if (!node.children.some(isCaptionedImage)) {
+              return
+            }
+
+            const result: ElementContent[] = []
+            let run: ElementContent[] = []
+            const flushRun = () => {
+              const hasContent = run.some(
+                (child) => child.type !== "text" || child.value.trim() !== "",
+              )
+              if (hasContent) {
+                result.push({ ...node, children: run })
+              }
+              run = []
+            }
+
+            for (const child of node.children) {
+              if (isCaptionedImage(child)) {
+                flushRun()
+                result.push({
+                  type: "element",
+                  tagName: "figure",
+                  properties: {},
+                  children: [
+                    child,
+                    {
+                      type: "element",
+                      tagName: "figcaption",
+                      properties: {},
+                      children: [{ type: "text", value: child.properties.alt as string }],
+                    },
+                  ],
+                })
+              } else {
+                run.push(child)
+              }
+            }
+            flushRun()
+
+            parent.children.splice(index, 1, ...result)
+            return index + result.length
+          })
+        }
+      })
 
       if (opts.mermaid) {
         plugins.push(() => {

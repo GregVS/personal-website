@@ -520,6 +520,22 @@ p > img + em {
   transform: translateY(-1rem);
 }
 
+figure:has(> img) {
+  margin: 1rem 0;
+  text-align: center;
+
+  & > img {
+    margin: 0 auto;
+  }
+
+  & > figcaption {
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--darkgray);
+  }
+}
+
 hr {
   width: 100%;
   margin: 2rem auto;

@@ -8,8 +8,8 @@ I'm a software engineer that likes learning and building cool things. I'm partic
 
 ## Projects
 
-- [[A Model Made of Shapley Values]]
 - [[Racing-SLAM]]
+- [[A Model Made of Shapley Values|Shapley-based ML Model]]
 - [[Fantasy Track and Field]]
 - [[Autonomous Toy Car]]
 - [[TROBO]]
