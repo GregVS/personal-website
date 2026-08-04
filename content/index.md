@@ -9,6 +9,7 @@ I'm a software engineer that likes learning and building cool things.
 - [[Racing-SLAM]]
 - [[Fantasy Track and Field]]
 - [[Autonomous Toy Car]]
+- [[TROBO]]
 
 And more on my [GitHub](https://github.com/GregVS) page.
 ## Experience

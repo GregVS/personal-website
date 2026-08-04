@@ -2,7 +2,12 @@
 created: 2025-01-06
 modified: 2025-01-06
 ---
-This is a project from way back in 2018. It was one of my early experiences with robotics.
+This was one of my early experiences with robotics. A few highlights:
+
+- 2D LiDAR and SLAM implementation using Random Mutation Hill Climbing for laser scan matching
+- Trajectory planning based on Stanford's [Stanley](https://robots.stanford.edu/papers/thrun.stanley05.pdf) from 2005 DARPA Grand Challenge
+- Obstacle detection and avoidance
+- PID control for following trajectory
 
 <div style="width: 100%;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mdljP9yjuvI?si=C5YViIe3ptqpB61U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
