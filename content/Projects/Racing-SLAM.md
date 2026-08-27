@@ -1,14 +1,13 @@
 ---
 created: 2025-01-03
-modified: 2026-07-30
+modified: 2026-08-25
 ---
-
 
 > [!INFO]
 > Read about the implementation [[Logs/Racing-SLAM V2.md|here]].
 > Or view [on GitHub](https://github.com/GregVS/Racing-SLAM).
 
-Racing SLAM is a single camera (monocular) Simultaneous Localization and Mapping algorithm used in robotics to build a map of the environment while also tracking the robot's position within that environment. The project applies the concept to racing environments, using sim-racing games to produce a realistic sandbox environment.
+Racing SLAM is a monocular-inertial Simultaneous Localization and Mapping algorithm used in robotics to build a map of the environment while also tracking the robot's position within that environment. The project applies the concept to high speed racing situations.
 
 # Demo
 
@@ -18,33 +17,56 @@ The green points on the image show the motion of objects in the scene which is u
 
 # Benchmarks
 
-While SLAM can be evaluated visually, numerical evaluation provides an objective metric to guide iteration, and provides a way to compare my algorithm's performance to other open-source implementations. I used two benchmarks:
+I used two benchmarks:
 
-1. [KITTI](https://www.cvlibs.net/datasets/kitti/eval_odometry.php) - a popular public dataset featuring low-speed driving scenes. Provides video feed and ground truth poses (translation + rotation) for every frame.
-2. Custom iRacing Dataset - my own laps in the iRacing simulator at various tracks. I wrote a scripts to translate iRacing's native telemetry export into the same ground truth format as KITTI.
+1. [EuRoC](https://projects.asl.ethz.ch/datasets/euroc-mav/) - a popular visual-inertial public dataset featuring various scenes taken from MAV (micro aerial vehicle).
+2. Custom iRacing Dataset - my own laps in the iRacing simulator at various tracks. I translated iRacing's native telemetry export into ground truth trajectories, and used the included IMU sensor data with randomized bias and noise, according to the BMI088 datasheet.
 
 ## Results
 
-Comparisons between Racing SLAM (v2) and [ORB-SLAM3](https://arxiv.org/abs/2007.11898) (monocular).
-Results are expressed as % Average Translation Error. Racing SLAM performs worse on KITTI, but significantly better on racing footage.
+Comparisons between Racing SLAM and [ORB-SLAM3](https://arxiv.org/abs/2007.11898) on EuRoC sequences. Results show ATE RMSE in meters. Visual-inertial (VI) configurations report ATE after a SE(3) transform, while monocular-only configurations use a SIM(3) transform.
 
-| seq                    | ORB-SLAM3               | Racing-SLAM |
-| ---------------------- | ----------------------- | ----------- |
-| KITTI 03               | 1.01                    | 2.16        |
-| KIITI 04               | 1.19                    | 3.18        |
-| KITTI 06               | 8.23                    | 11.65       |
-| KITTI 07               | 2.55                    | 11.35       |
-| iRacing Lime Rock Park | 4.18 (3/5 runs failed)  | 0.15        |
-| iRacing Road Atlanta   | 13.03 (4/5 runs failed) | 0.21        |
+On EuRoC, Racing-SLAM performs slightly worse than ORB-SLAM3, but remains competitive.
+
+| EuRoC Seq | Racing-SLAM (VI) | ORB-SLAM3 (VI) |
+| --------- | ---------------- | -------------- |
+| MH01      | 0.04             | 0.062          |
+| MH02      | 0.10             | 0.037          |
+| MH03      | 0.05             | 0.046          |
+| MH04      | 0.19             | 0.075          |
+| MH05      | 0.08             | 0.057          |
+
+Comparisons on racing sequences. ORB-SLAM3 had high failure rates and nearly all runs were catastrophic.
+
+| iRacing Seq  | Racing-SLAM (VI) | ORB-SLAM3 (VI) | ORB-SLAM3 (mono) |
+| ------------ | ---------------- | -------------- | ---------------- |
+| Lime Rock    | 3.25             | DNF            | 27.58            |
+| Road Atlanta | 6.15             | 1709.11        | 44.92            |
+| Ledenon      | 19.06            | 2839.25        | 133.47           |
+
+_I plan to include additional benchmarks soon._
+
+# Features
+
+These are the core components of the system:
+
+- Lucas-Kanade optical flow for frame-to-frame feature tracking
+- ORB descriptors for map matching and loop recognition
+- Local bundle adjustment
+- DBOW2 place recognition
+- Loop closure with pose graph optimization and global bundle adjustment
+- IMU support with preintegration and VINS-style initialization
+- Continuous IMU scale and gravity refinement
 
 # Inspiration
 
-I had recently read [Probabilistic Robotics by Sebastian Thrun](http://www.probabilistic-robotics.org/). I've known about Thrun for quite some time; I remember watching his videos and reading his papers back in middle school when I built an autonomous toy car. It's fair to say he's at least partially inspired my interest in robotics. If you haven't read it, the core focus is on localization and mapping. Put them together and you get SLAM (Simultaneous Localization and Mapping). Big idea: take some sensor data and figure out what your world looks like and where you are in that world.
+I had recently read [Probabilistic Robotics by Sebastian Thrun](http://www.probabilistic-robotics.org/). I've known about Thrun for quite some time; I remember watching his videos and reading his papers back in middle school when I built an autonomous toy car. It's fair to say he's at least partially inspired my interest in robotics.
 
-## Logs
+# Logs
 
 Read about my progress:
 
-- [[Racing-SLAM V2]]
-- [[Racing-SLAM V1]]
+<!-- - [[Racing-SLAM V2]] -->
+
+- [[Racing-SLAM V1]] (monocular-only version without loop closure)
 - [[Next steps for Racing-SLAM V1]]

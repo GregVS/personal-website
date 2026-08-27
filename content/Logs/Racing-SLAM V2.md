@@ -1,6 +1,7 @@
 ---
 created: 2026-07-30
 modified: 2026-08-04
+draft: true
 ---
 
 [[Racing-SLAM V1]] was capable of localization and mapping relatively simple environments, but struggled with tracking rotation and scale over time. V2 aims to fix that through a series of algorithmic improvements. It also introduces an evaluation harness that allows comparison of other SLAM algorithms and provides a rigorous way to test changes.
