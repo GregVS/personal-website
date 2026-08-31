@@ -26,23 +26,30 @@ I used two benchmarks:
 
 Comparisons between Racing SLAM and [ORB-SLAM3](https://arxiv.org/abs/2007.11898) on EuRoC sequences. Results show ATE RMSE in meters. Visual-inertial (VI) configurations report ATE after a SE(3) transform, while monocular-only configurations use a SIM(3) transform.
 
-On EuRoC, Racing-SLAM performs slightly worse than ORB-SLAM3, but remains competitive.
+On EuRoC, Racing-SLAM performs similar to ORB-SLAM3, but struggles on V203.
 
 | EuRoC Seq | Racing-SLAM (VI) | ORB-SLAM3 (VI) |
 | --------- | ---------------- | -------------- |
-| MH01      | 0.04             | 0.062          |
-| MH02      | 0.10             | 0.037          |
-| MH03      | 0.05             | 0.046          |
-| MH04      | 0.19             | 0.075          |
-| MH05      | 0.08             | 0.057          |
+| MH01      | **0.033**        | 0.062          |
+| MH02      | **0.024**        | 0.037          |
+| MH03      | **0.031**        | 0.046          |
+| MH04      | 0.091            | **0.075**      |
+| MH05      | 0.062            | **0.057**      |
+| V101      | **0.039**        | 0.049          |
+| V102      | 0.026            | **0.015**      |
+| V103      | 0.044            | **0.037**      |
+| V201      | **0.033**        | 0.042          |
+| V202      | 0.032            | **0.021**      |
+| V203      | 0.256            | **0.027**      |
 
-Comparisons on racing sequences. ORB-SLAM3 had high failure rates and nearly all runs were catastrophic.
+On racing sequences, ORB-SLAM3 had high failure rates and nearly all runs were catastrophic.
+RMSE numbers here are larger than EuRoC since the trajectories span 5-10 kilometers.
 
 | iRacing Seq  | Racing-SLAM (VI) | ORB-SLAM3 (VI) | ORB-SLAM3 (mono) |
 | ------------ | ---------------- | -------------- | ---------------- |
-| Lime Rock    | 3.25             | DNF            | 27.58            |
-| Road Atlanta | 6.15             | 1709.11        | 44.92            |
-| Ledenon      | 19.06            | 2839.25        | 133.47           |
+| Lime Rock    | 2.02             | DNF            | 27.58            |
+| Road Atlanta | 2.76             | 1709.11        | 44.92            |
+| Ledenon      | 11.45            | 2839.25        | 133.47           |
 
 _I plan to include additional benchmarks soon._
 
